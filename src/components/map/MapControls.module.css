@@ -1,0 +1,367 @@
+.panel {
+  position: absolute;
+  z-index: 5;
+  top: 16px;
+  left: 16px;
+  width: min(372px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  overflow: auto;
+  padding: 16px;
+  border: 1px solid rgba(28, 25, 23, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 250, 244, 0.94);
+  color: #1c1917;
+  box-shadow: 0 16px 40px rgba(48, 36, 18, 0.16);
+  backdrop-filter: blur(16px);
+}
+
+.panelDark {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(22, 24, 23, 0.92);
+  color: #f4f0e6;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+}
+
+.brand {
+  margin: 0 0 2px;
+  color: #8a5a10;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.panelDark .brand {
+  color: #e1b15a;
+}
+
+.theme,
+.ghost,
+.playback button,
+.error button {
+  border: 1px solid rgba(28, 25, 23, 0.14);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+.theme {
+  flex: 0 0 auto;
+  padding: 7px 10px;
+  font-size: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.field span,
+.speed span,
+.status,
+.note,
+.hint,
+.kicker {
+  font-size: 12px;
+}
+
+.field span {
+  font-weight: 700;
+}
+
+.field small {
+  color: #6d675e;
+  font-size: 11px;
+}
+
+.panelDark .field small,
+.panelDark .note,
+.panelDark .hint {
+  color: #c9c2b6;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(28, 25, 23, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+}
+
+.panelDark .field input {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.picks,
+.actions,
+.playbackButtons {
+  display: grid;
+  gap: 8px;
+}
+
+.picks,
+.playbackButtons {
+  grid-template-columns: 1fr 1fr;
+}
+
+.actions {
+  grid-template-columns: 1fr auto;
+  margin-top: 12px;
+}
+
+.picks button,
+.primary,
+.ghost,
+.playback button,
+.error button {
+  min-height: 40px;
+  padding: 8px 12px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.pickA,
+.pickB {
+  border-radius: 12px;
+  background: transparent;
+}
+
+.pickA {
+  border: 1.5px solid #1f8a4c;
+  color: #176b3b;
+}
+
+.pickB {
+  border: 1.5px solid #d64545;
+  color: #a32626;
+}
+
+.panelDark .pickA {
+  color: #8ddeaf;
+}
+
+.panelDark .pickB {
+  color: #ffb4b0;
+}
+
+.pickOn.pickA {
+  background: #1f8a4c;
+  color: white;
+}
+
+.pickOn.pickB {
+  background: #d64545;
+  color: white;
+}
+
+.primary {
+  border: 0;
+  border-radius: 12px;
+  background: #e6a100;
+  color: #1c1917;
+}
+
+.primary:disabled,
+.playback button:disabled,
+.ghost:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.ghost {
+  padding-inline: 14px;
+}
+
+.hint,
+.warning,
+.error,
+.route {
+  margin-top: 12px;
+}
+
+.hint {
+  margin-bottom: 0;
+  color: #6d675e;
+}
+
+.warning,
+.error {
+  padding: 10px 12px;
+  border-radius: 12px;
+}
+
+.warning {
+  background: #fff4d8;
+  color: #6d4d08;
+}
+
+.error {
+  display: grid;
+  gap: 8px;
+  background: #fff0ee;
+  color: #8a2424;
+}
+
+.error p,
+.note,
+.hint,
+.status,
+.kicker {
+  margin: 0;
+}
+
+.error button {
+  justify-self: start;
+  background: white;
+}
+
+.route {
+  padding-top: 12px;
+  border-top: 1px solid rgba(28, 25, 23, 0.08);
+}
+
+.panelDark .route {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.kicker {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.stats {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 6px 0;
+}
+
+.stats strong {
+  font-size: 28px;
+  letter-spacing: -0.04em;
+}
+
+.note {
+  color: #6d675e;
+  line-height: 1.4;
+}
+
+.route dl {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+}
+
+.route dl div {
+  display: grid;
+  gap: 2px;
+}
+
+.route dt {
+  color: #6d675e;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.route dd {
+  margin: 0;
+  font-size: 13px;
+}
+
+.playback {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.playback button {
+  border-radius: 10px;
+  background: rgba(28, 25, 23, 0.04);
+}
+
+.panelDark .playback button,
+.panelDark .ghost,
+.panelDark .theme {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.speed {
+  display: grid;
+  gap: 6px;
+}
+
+.speed input {
+  width: 100%;
+  accent-color: #e6a100;
+}
+
+.progress {
+  height: 4px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: rgba(28, 25, 23, 0.1);
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  background: #1c1917;
+}
+
+.panelDark .progress {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.panelDark .progress span {
+  background: #e1b15a;
+}
+
+.status {
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .panel {
+    top: auto;
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    left: 12px;
+    width: auto;
+    max-height: min(48dvh, 420px);
+  }
+
+  .actions,
+  .playbackButtons {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .primary {
+    grid-column: 1 / -1;
+  }
+}

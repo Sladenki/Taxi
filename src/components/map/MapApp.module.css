@@ -1,0 +1,59 @@
+.shell {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #e7e1d4;
+  color: #1c1917;
+}
+
+.scrim,
+.fatal {
+  position: absolute;
+  z-index: 6;
+  display: grid;
+  place-items: center;
+}
+
+.scrim {
+  inset: 0;
+  background: rgba(243, 240, 232, 0.72);
+  color: #3f3a34;
+  font-size: 16px;
+  font-weight: 650;
+  pointer-events: none;
+}
+
+.fatal {
+  top: 50%;
+  left: 50%;
+  width: min(420px, calc(100vw - 32px));
+  padding: 22px;
+  border-radius: 18px;
+  background: #fffaf4;
+  text-align: left;
+  box-shadow: 0 18px 50px rgba(40, 30, 16, 0.2);
+  transform: translate(-50%, -50%);
+}
+
+.fatal h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.fatal p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.fatal button {
+  margin-top: 14px;
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 12px;
+  background: #1c1917;
+  color: #f6c445;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
